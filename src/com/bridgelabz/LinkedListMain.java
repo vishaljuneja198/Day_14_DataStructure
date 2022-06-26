@@ -35,6 +35,15 @@ public class LinkedListMain {
         System.out.println();
         l3.print();
 
+        System.out.println("\nFinding Node value 30");
+        Node<Integer> temp = l1.search(30);
+
+        if(temp == null){
+            System.out.println("Data not found");
+        }else{
+            System.out.println("Data found");
+        }
+
 
     }
 }
