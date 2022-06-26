@@ -67,4 +67,19 @@ public class LinkedList<K> {
         head = lastSecond;
     }
 
+    public void delete(K key){
+        Node<K> temp = head;
+        Node<K> previousNode = null;
+
+        while(temp!=null){
+            if(temp.key.equals(key)){
+                break;
+            }
+            previousNode = temp;
+            temp = temp.next;
+        }
+        previousNode.next=temp.next;
+    }
+
 }
+
