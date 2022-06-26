@@ -44,6 +44,9 @@ public class LinkedListMain {
             System.out.println("Data found");
         }
 
+        l1.insert(40,30);
+        l1.print();
+
 
     }
 }
