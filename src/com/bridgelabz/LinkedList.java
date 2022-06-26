@@ -67,19 +67,35 @@ public class LinkedList<K> {
         head = lastSecond;
     }
 
-    public void delete(K key){
+    public void delete(K key) {
         Node<K> temp = head;
         Node<K> previousNode = null;
 
-        while(temp!=null){
-            if(temp.key.equals(key)){
+        while (temp != null) {
+            if (temp.key.equals(key)) {
                 break;
             }
             previousNode = temp;
             temp = temp.next;
         }
-        previousNode.next=temp.next;
+        previousNode.next = temp.next;
     }
 
-}
+    public void sort() {
+        Node<K> temp = head;
+        Node<K> index = temp.next;
+        Integer value = 0;
 
+        while (temp != null) {
+            while (index != null) {
+                if ((Integer) temp.key > (Integer) index.key) {
+                    value = (Integer) temp.key;
+                    temp.key = index.key;
+                    index.key = (K) value;
+                }
+                index = index.next;
+            }
+            temp = temp.next;
+        }
+    }
+}

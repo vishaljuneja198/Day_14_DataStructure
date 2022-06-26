@@ -51,6 +51,9 @@ public class LinkedListMain {
         System.out.println();
         l1.print();
 
+        l1.sort();
+        System.out.println();
+        l1.print();
 
     }
 }
